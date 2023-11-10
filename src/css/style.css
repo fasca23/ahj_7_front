@@ -1,0 +1,256 @@
+body {
+  position: relative;
+  color: #1b1b1b;
+  background: #dbddc1;
+  font-size: larger;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.helpdesk-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.btn-add-ticket-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.btn-add-ticket {
+  margin: 10px 10px 0px;
+  font-size: larger;
+}
+
+.tickets-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  max-width: 100%;
+
+  margin: 15px;
+  min-height: 50px;
+
+  text-align: center;
+  justify-content: center;
+}
+
+.ticket {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 10px 6px;
+  list-style: none;
+  border: 1px solid #565656;
+  background-color: #ffffffac;
+}
+
+.ticket-completed {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  margin: 10px;
+  text-align: center;
+  line-height: 42px;
+  border: 2px solid #565656;
+  cursor: pointer;
+  user-select: none;
+  font-size: larger;
+  color: green;
+}
+
+.ticket-completed:hover {
+  color: #cf00b7;
+  box-shadow: 0px 0px 5px #cf00b7;
+}
+
+.ticket-text {
+  flex-grow: 1;
+}
+
+.ticket-text-name {
+  min-width: 50px;
+  max-width: 100%;
+  margin: 10px 0px 5px 5px;
+  text-align: left;
+  line-height: 24px;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.ticket-date {
+  flex-shrink: 0;
+  width: 30%;
+  height: 24x;
+  margin: 10px 0px 5px 5px;
+  padding: 0px 5px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.ticket-edit {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  margin: 10px 0px 5px 5px;
+  text-align: center;
+  line-height: 42px;
+  border: 2px solid #565656;
+  cursor: pointer;
+  user-select: none;
+  font-size: larger;
+  color: blue;
+}
+
+.ticket-edit:hover {
+  color: #cf00b7;
+  box-shadow: 0px 0px 5px #cf00b7;
+}
+
+.ticket-remove {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  margin: 10px 10px 5px 5px;
+  text-align: center;
+  line-height: 42px;
+  border: 2px solid #565656;
+  cursor: pointer;
+  user-select: none;
+  font-size: larger;
+  color: red;
+}
+
+.ticket-remove:hover {
+  color: #cf00b7;
+  box-shadow: 0px 0px 5px #cf00b7;
+  user-select: none;
+}
+
+.ticket-text-description {
+  display: flex;
+}
+
+.ticket-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(24, 21, 2, 0.8);
+}
+
+.ticket-form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 400px;
+  max-height: 400px;
+  padding: 5px;
+  overflow: auto;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.ticket-form-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px auto 0px;
+}
+
+.form-text {
+  display: flex;
+  width: 100%;
+  margin: 15px 15px 0px;
+  padding: 0px 5px;
+}
+
+.ticket-form-label {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ticket-form-label-text {
+  width: 100%;
+  margin: 15px 15px 0px;
+  padding-left: 5px;
+}
+
+.ticket-form-label-field {
+  width: 100%;
+  margin: 8px 15px 0px;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+
+[data-id=container-description] .ticket-form-label-field {
+  min-height: 50px;
+  max-height: 150px;
+  height: 50px;
+  resize: vertical;
+}
+
+.ticket-form-label-field:focus {
+  box-shadow: 0px 0px 10px 0px #0c1e3b;
+  outline: 0px;
+}
+
+.ticket-form-button-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: end;
+}
+
+.btn-form {
+  margin: 15px 15px 15px 0px;
+}
+
+.disable {
+  display: none;
+}
+
+.loading {
+  display: flex;
+  margin: auto;
+
+  font-weight: bold;
+  display:inline-block;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l 1s steps(4) infinite;
+}

@@ -1,0 +1,6 @@
+dist
+coverage
+docs
+webpack.config.js
+webpack.dev.js
+webpack.prod.js
